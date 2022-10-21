@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border-radius: 100%;
+            display: flex;
+            animation: changeScale 1s infinite alternate;
+        }
+        @keyframes changeScale{
+            from{
+                transform: scale(1, 1);
+            }
+            to{
+                transform: scale(0);
+            }
+        }
+        .loading{
+            display: flex;
+        }
+
+        .loading1{
+            width: 10px;
+            height: 50px;
+            background: #08c;
+            margin-right: 2px;
+            animation: load1 1s infinite alternate;
+        }
+        .loading2{
+            width: 10px;
+            height: 50px;
+            background: #08c;
+            margin-right: 2px;
+            animation: load1 1s infinite alternate;
+            animation-delay: 0.2s;
+        }
+        .loading3{
+            width: 10px;
+            height: 50px;
+            background: #08c;
+            margin-right: 2px;
+            animation: load1 1s infinite alternate;
+            animation-delay: 0.3s;
+        }
+        .loading4{
+            width: 10px;
+            height: 50px;
+            background: #08c;
+            margin-right: 2px;
+            animation: load1 1s infinite alternate;
+            animation-delay: 0.4s;
+        }
+
+        @keyframes load1{
+            from{
+                transform: scale(1 1);
+            }
+            to{
+                transform: scale(0);
+            }
+        }
+
+        .triangle{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: red;
+            animation: triangleRoute 5s infinite;
+        }
+
+        @keyframes triangleRoute{
+            0%{
+                transform: 0;
+            }
+            25%{
+                transform: translate(50px, -100px);
+            }
+            50%{
+                transform: translate(-50px, -100px);
+            }
+
+            75%{
+                transform: translate(-150px, -100px);
+            }
+        }
+
+        .rotate{
+            display: flex;
+            flex-direction: row;
+            animation: routing 3s infinite;
+        }
+        .ball1{
+            display: flex;
+            flex-direction: column;
+        }
+        .ball2{
+            display: flex;
+            flex-direction: column
+        }
+        .ball1-1{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: #08c;
+        }
+        .ball1-2{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: #08c;
+        }
+        .ball2-1{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: rgb(1, 170, 255);
+        }
+        .ball2-2{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: rgb(1, 170, 255);
+        }
+
+        @keyframes routing{
+            from{}
+            to{
+                transform: rotate(90deg);
+            }
+        }
+
+        .basket{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: orangered;
+            animation: bouncing 2s infinite;
+        }
+        @keyframes bouncing{
+            0%{
+                transform: 0px;
+            }
+            25%{
+                transform: translate(0px, -200px);
+            }
+            75%{
+                transform: scale(1.2, .8);
+            }
+            100%{
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="circle">
+        </div>
+        <p>Ball Scale</p>
+    </div>
+
+    <div class="container">
+        <div class="loading">
+            <div class="loading1">
+
+            </div>
+            <div class="loading2">
+    
+            </div>
+            <div class="loading3">
+    
+            </div>
+            <div class="loading4">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="triangle"></div>
+    </div>
+
+    <div class="container">
+        <div class="rotate">
+            <div class="ball1">
+                <div class="ball1-1"></div>
+                <div class="ball1-2"></div>
+            </div>
+            <div class="ball2">
+                <div class="ball2-1"></div>
+                <div class="ball2-2"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="basket">
+
+        </div>
+    </div>
+
+</body>
+</html>

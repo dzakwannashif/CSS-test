@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .translate{
+            width: 400px;
+            height: 200px;
+            background: #08c;
+        }
+
+        .translate:hover{
+            transform: translate(100px, 10px); 
+            /* transform untuk perpindahan (x,y) */
+            transition: 2000ms;
+            /* berapa lama waktu yang terjadinya */
+        }
+
+        .rotate{
+            width: 400px;
+            height: 200px;
+            background: #08c;
+            transition: 1s;
+        }
+
+        .rotate:hover{
+            transform: rotate(30deg);
+            background: #00ffff;
+        }
+
+        .scale{
+            width: 400px;
+            height: 200px;
+            background: #08c;
+            transition: 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .scale:hover{
+            transform: scale(1, 2);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Transform ada 2 :
+        1. 2d
+            - Translate
+            - Rotate
+            - Scale
+            - Skew
+            - Matriks
+
+        2. 3d
+            - Rotate
+     -->
+
+     <div class="container">
+        <div class="translate">
+            <p>translate</p>
+        </div>
+     </div>
+     
+     <div class="container">
+        <div class="rotate">
+            <p>rotate</p>
+        </div>
+     </div>
+     
+     <div class="container">
+        <div class="scale">
+            <p>scale</p>
+        </div>
+     </div>
+
+
+</body>
+</html>
