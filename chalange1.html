@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid{
+            display: grid;
+            background: #08c;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .grid div{
+            min-height: 50px;
+            text-align: center;
+            display: grid;
+            place-content: center;
+            padding: 20px;
+        }
+
+        .aside{
+            grid-column: -2/ -1;
+            grid-row: 2/ span 3;
+            background-color: aqua;
+        }
+
+        .content {
+            grid-column: 2 / -2;
+            grid-row: 2 / span 2;
+          background-color: red;
+        }
+
+        .news {
+            grid-column: 2 / -2;
+            background-color: chartreuse;
+        }
+
+        .brand {
+            grid-column: 1/ span 2;
+             background-color: purple;
+        }
+        .footer {
+            grid-column: 1 / 6;
+            background-color: yellow;
+        }
+
+        .nav1, .nav2, .nav3 {
+            background-color: darkgreen;
+        }
+
+        .sidebar1, .sidebar2, .sidebar3 {
+            background-color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="brand">brand</div>
+            <div class="nav1">nav1</div>
+            <div class="nav2">nav2</div>
+            <div class="nav3">nav3</div>
+            <div class="sidebar1">sidebar1</div>
+            <div class="content">content</div>
+            <div class="aside">aside</div>
+            <div class="sidebar2">sidebar2</div>
+            <div class="sidebar3">sidebar3</div>
+            <div class="news">news</div>
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>
